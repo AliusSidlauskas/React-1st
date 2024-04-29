@@ -1,0 +1,27 @@
+.main{
+    height: 300px;
+    background-image:url(https://shopmimimiller.com/wp-content/uploads/2024/01/cat-meme.webp) ;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .topic{
+    color: white;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .navigation{
+    display:flex;
+    gap: 10px;
+    align-items: center;
+  }
+  
+  
+  @media only screen and (max-width:768px){
+    .navigation{
+      display: none;
+    }
+  }

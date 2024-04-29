@@ -1,0 +1,17 @@
+.main {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 2rem 0;
+  }
+
+  /* @media only screen and (max-width: 768px) {
+    .main {
+      background-color: rgb(150, 44, 44);
+     
+    }
+  } */
+
+  
