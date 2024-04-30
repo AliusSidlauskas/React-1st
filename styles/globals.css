@@ -1,6 +1,7 @@
 body{
 margin:0;
-/* width:1200px; */
+max-width: 1200px;
+min-width: 380px;
 margin:auto;
 background-color: black;
 }

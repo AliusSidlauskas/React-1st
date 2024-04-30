@@ -1,10 +1,13 @@
+import { useState } from "react";
 import styles from "./Header.module.css";
 
 const Header = () => {
+  const [logo, setLogo] = useState("Bailard Foundation");
+  
   return (
     <header className={styles.main}>
       <div className={styles.topic}>
-        <h3>Bailard Foundation</h3>
+        <h3 className={styles.logo}>{logo}</h3>
         <div className={styles.navigation}>
           <h4>About</h4>
           <h4>News</h4>
@@ -13,7 +16,7 @@ const Header = () => {
         </div>
       </div>
     </header>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;

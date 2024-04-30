@@ -2,3 +2,10 @@
     height: 60px;
     background-color: rgb(174, 174, 231);
 }
+
+.copyright{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0 2rem;
+}
