@@ -5,61 +5,52 @@ import { ArticleCard } from "../ArticleCard/ArticleCard";
 export const ArticlesWrapper = () => {
   const [cards, setCards] = useState([
     {
-      title: "Pirmadienis",
+      title: "Monday",
       text: "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
       imgUrl:
         "https://m.demotyvacijos.lt/media/demotivators/demotyvacija.lt_PIRMADIENIS-Kartais-tu-ju-neimanoma-atlaikyti.jpg",
+      suggestion: "Get some coffee",
     },
 
     {
-      title: "Antradienis",
+      title: "Tuesday",
       text: "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
       imgUrl:
         "https://m.demotyvacijos.lt/media/demotivators/demotyvacija.lt_ANTRADIENIS-geriau-jau-atsikelciau-penktadieni-arba-niekada_155518284196.jpg ",
+      suggestion: "Forget monday",
     },
 
     {
-      title: "Trečiadienis",
+      title: "Wednesday",
       text: "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
       imgUrl:
         "https://m.demotyvacijos.lt/media/demotivators/demotyvacija.lt_siandien-treciadienis-ir-tai-reiskia...-Kad-tu-zinosi-ka-veikia-89-jaunimo-nuo-2200-iki-2300-valandos.jpg",
+      suggestion: "You are in the middle",
     },
 
     {
-      title: "Ketvirtadienis",
+      title: "Thursday",
       text: "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
       imgUrl:
         "https://m.demotyvacijos.lt/media/demotivators/demotyvacija.lt_Ketvirtadienis-penktadienigaudyk-mane_140013969439.jpg",
+      suggestion: "Tomorrow is friday",
     },
   ]);
 
+  
   return (
     <div className={styles.main}>
-      <ArticleCard
-        title={cards[0].title}
-        text={cards[0].text}
-        imgUrl={cards[0].imgUrl}
-      />
-
-      <ArticleCard
-        title={cards[1].title}
-        text={cards[1].text}
-        imgUrl={cards[1].imgUrl}
-      />
-
-      <ArticleCard
-        title={cards[2].title}
-        text={cards[2].text}
-        imgUrl={cards[2].imgUrl}
-      />
-
-      <ArticleCard
-        title={cards[3].title}
-        text={cards[3].text}
-        imgUrl={cards[3].imgUrl}
-      />
+      {cards.map((card) => (
+        <ArticleCard
+          title={cards.title}
+          text={card.text}
+          imgUrl={card.imgUrl}
+          suggestion={card.suggestion}
+          />
+        ))}
     </div>
   );
 };
+
 
 export default ArticlesWrapper;

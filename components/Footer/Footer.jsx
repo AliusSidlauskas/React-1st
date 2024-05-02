@@ -1,5 +1,5 @@
 import styles from "./Footer.module.css";
-import copyLogo from "../../public/1024px-Copyright.svg.png";
+import copyLogo from "../../assets/1024px-Copyright.svg.png";
 import { useState } from "react";
 
 const Footer = () => {
@@ -24,7 +24,7 @@ const Footer = () => {
   return (
     <div className={styles.main}>
       <div className={styles.copyright}>
-        <img src={copyLogo} className={styles.copyLogo} />
+        <img src={copyLogo.src} className={styles.copyLogo} />
 
         {isDisplayedCopyrightText && (
           <h5 onClick={displayCopyrightText} className={styles.copyrightText}>

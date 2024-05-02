@@ -1,27 +1,67 @@
-.main{
-    height: 300px;
-    background-image:url(https://shopmimimiller.com/wp-content/uploads/2024/01/cat-meme.webp) ;
-    background-size: cover;
-    background-position: center;
+.main {
+  height: 300px;
+  background-image: url(https://shopmimimiller.com/wp-content/uploads/2024/01/cat-meme.webp);
+  background-size: cover;
+  background-position: center;
+}
+
+.topic {
+  color: white;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav ul {
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+}
+
+.nav ul li a {
+  color: white;
+}
+
+.mobileBtn {
+  display: none;
+}
+.mobileMenu {
+  position: fixed;
+  background-color: rgb(236, 236, 199);
+  top: 80px;
+  left: 0;
+  width: 100%;
+  height: calc(100vh - 80px);
+}
+@media only screen and (max-width: 768px) {
+  .nav {
+    display: none;
   }
-  
-  .topic{
-    color: white;
-    padding: 1rem;
+
+  .mobileBtn {
+    display: inline-block;
+    opacity: 60%;
+    cursor: pointer;
+    border: none;
+  }
+  .mobileMenu {
+    display: inline-block;
+    animation: mobile-menu;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    
+  }
+
+  .mobileMenu nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
+    margin-top: 5rem;
+    gap: 1rem;
   }
-  
-  .navigation{
-    display:flex;
-    gap: 10px;
-    align-items: center;
-  }
-  
-  
-  @media only screen and (max-width:768px){
-    .navigation{
-      display: none;
-    }
-  }
+}
