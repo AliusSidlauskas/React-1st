@@ -1,9 +1,14 @@
+import { useEffect } from "react";
 import styles from "../styles/Home.module.css";
 import Header from "../components/Header/Header";
 import Main from "../components/Main/Main";
 import Footer from "../components/Footer/Footer";
 
 const MainPage = () => {
+  useEffect(() => {
+    console.log("idetas kodas i clientSide");
+  }, []);
+
   return (
     <div className={styles.container}>
       <Header />
@@ -15,10 +20,8 @@ const MainPage = () => {
 
 export default MainPage;
 
-
-// 1. Apsirašyti produktų masyvą, produkto objektą sudaro: kaina, nuotraukos url, title, parduotivės adresas;
-// 2. Produkto kortelė turi atvaizduot visą informaciją, bei mygtuką show location. Paspaudus ant mygtuko yra parodomas parduotuvės adresas;
-// 3. Masyvą .map() pagalba atvaizduoti korteliu pavidalu;
-// 4. Paspaudus ant kortelės consolėj turi atsirast to produkto pavadinimas;
-// 5. Atkartoti dizainą iš nuotraukų;
-// 6. Burger button / mobile menu
+// . Prie savo produktų masyvo pridėti property unitsLeft (number);
+// 2. Jeigu produkto unitsLeft yra 1 ar. daugiau turi būt atvaizduojama produkto kortelė, jeigu produkto unitsLeft yra 0 kotelės viduje turi vietoj nuotraukos atsirast užrašas "Šiuo metu prekės neturim"; (naudot tennary operator);
+// 3. Sudėti savo produktus į mockAPI, juos parsifetchint, įdėt į useState kintamajį;
+// 4. Vietoj fetch panaudoti axios biblioteką;
+// 5. Pasidaryt vieną iš neatliktų praeitų paskaitų dizainą;

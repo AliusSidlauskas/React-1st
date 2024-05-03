@@ -1,7 +1,7 @@
 import { useState } from "react";
 import styles from "./ArticleCard.module.css";
 
-export const ArticleCard = ({ title, text, imgUrl, suggestion }) => {
+const ArticleCard = ({ title, text, imgUrl, suggestion }) => {
   const [isShowSuggestion, setShowSuggestion] = useState(false);
   console.log(title)
 

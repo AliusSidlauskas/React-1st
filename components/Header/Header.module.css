@@ -27,6 +27,7 @@
   display: none;
 }
 .mobileMenu {
+  display: none;
   position: fixed;
   background-color: rgb(236, 236, 199);
   top: 80px;

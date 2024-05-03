@@ -1,10 +1,10 @@
 import { useState } from "react";
 import styles from "./ArticlesWrapper.module.css";
-import { ArticleCard } from "../ArticleCard/ArticleCard";
-
-export const ArticlesWrapper = () => {
+import ArticleCard from "../ArticleCard/ArticleCard";
+const ArticlesWrapper = () => {
   const [cards, setCards] = useState([
     {
+      id: 1,
       title: "Monday",
       text: "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
       imgUrl:
@@ -13,6 +13,7 @@ export const ArticlesWrapper = () => {
     },
 
     {
+      id: 2,
       title: "Tuesday",
       text: "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
       imgUrl:
@@ -21,6 +22,7 @@ export const ArticlesWrapper = () => {
     },
 
     {
+      id: 3,
       title: "Wednesday",
       text: "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
       imgUrl:
@@ -29,6 +31,7 @@ export const ArticlesWrapper = () => {
     },
 
     {
+      id: 4,
       title: "Thursday",
       text: "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
       imgUrl:
@@ -37,20 +40,19 @@ export const ArticlesWrapper = () => {
     },
   ]);
 
-  
   return (
     <div className={styles.main}>
       {cards.map((card) => (
         <ArticleCard
+          key={card.id}
           title={cards.title}
           text={card.text}
           imgUrl={card.imgUrl}
           suggestion={card.suggestion}
-          />
-        ))}
+        />
+      ))}
     </div>
   );
 };
-
 
 export default ArticlesWrapper;
